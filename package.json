@@ -1,0 +1,34 @@
+{
+  "name": "website-base",
+  "version": "1.0.0",
+  "description": "Base project for building simple websites.",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run hot",
+    "test": "standard && jest",
+    "dev": "npm run development",
+    "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "watch": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "hot": "cross-env NODE_ENV=development webpack-dev-server --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "prod": "npm run production",
+    "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codyspring/website-base.git"
+  },
+  "author": "Cody Spring <codyspring@me.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/codyspring/website-base/issues"
+  },
+  "homepage": "https://github.com/codyspring/website-base#readme",
+  "devDependencies": {
+    "cross-env": "^5.2.0",
+    "laravel-mix": "^4.0.14",
+    "resolve-url-loader": "^2.3.1",
+    "sass": "^1.17.2",
+    "sass-loader": "^7.1.0",
+    "vue-template-compiler": "^2.6.8"
+  }
+}
